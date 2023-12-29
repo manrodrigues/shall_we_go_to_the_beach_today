@@ -3,6 +3,8 @@ name: Notifier
 on:
   workflow_run:
     workflows: ["Beach Today"]
+    types:
+      - completed
 
 jobs:
 
