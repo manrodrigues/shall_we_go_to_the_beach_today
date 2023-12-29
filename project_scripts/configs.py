@@ -20,7 +20,9 @@ def _read_configs():
     project_configs = parser['credentials']
 
     project_configs['email'] = project_configs.get('email')
-    project_configs['password'] = project_configs.get('password')
+    project_configs['nome'] = project_configs.get('nome')
+    project_configs['numero_matricula'] = project_configs.get('numero_matricula')
+    project_configs['credencial_id'] = project_configs.get('credencial_id')
 
     return project_configs
 
