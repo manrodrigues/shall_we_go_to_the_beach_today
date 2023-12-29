@@ -20,4 +20,8 @@ jobs:
           CREDENCIAL_ID: ${{ secrets.CREDENCIAL_ID }}
 
         run: |
-          pip install -r requirements.txt
+          cd ./shall_we_go_to_the_beach_today/project_scripts
+          python3 -m venv venv_praia
+          source behave_orb/bin/activate
+          pip3 install -r requirements.txt
+          python main.py
