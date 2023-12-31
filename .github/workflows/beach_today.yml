@@ -34,4 +34,4 @@ jobs:
     needs: verify
     steps:
       - name: Outra ação
-        run: echo "${{ needs.verify.outputs.vaga_para_compra }}"
+        run: echo "${{ needs.verify.outputs.resultado_compra }}"

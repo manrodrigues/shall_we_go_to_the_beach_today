@@ -14,3 +14,5 @@ session, vagas_compra, disopnivel_compra = check_disponibilidade(temporadas, ses
 session, vagas_sorteio, disopnivel_venda = check_disponibilidade(temporadas, session, tipo="SORTEIO")
 
 print(disopnivel_compra, disopnivel_venda)
+
+print(f"::set-output name=resultado_compra::{disopnivel_compra}")
