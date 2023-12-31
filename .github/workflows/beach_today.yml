@@ -21,7 +21,6 @@ jobs:
 
         run: |
           echo "Current working directory: $PWD"
-          echo ls -la
           cd ./project_scripts
           python3 -m venv venv_praia
           source behave_orb/bin/activate
