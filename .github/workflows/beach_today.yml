@@ -26,3 +26,12 @@ jobs:
           source venv_praia/bin/activate
           pip3 install -r requirements.txt
           python main.py
+        id: vaga_para_compra
+        continue-on-error: true
+
+  segundo_job:
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - name: Outra ação
+        run: echo "${{ needs.verify.outputs.vaga_para_compra }}"
