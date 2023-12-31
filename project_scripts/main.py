@@ -13,6 +13,5 @@ session, vagas_compra, disopnivel_compra = check_disponibilidade(temporadas, ses
 
 session, vagas_sorteio, disopnivel_venda = check_disponibilidade(temporadas, session, tipo="SORTEIO")
 
-print(disopnivel_compra, disopnivel_venda)
-
-print(f"RESULTADO_COMPRA={disopnivel_compra}")
+with open("resultado_compra.env", "w") as f:
+    f.write(f"RESULTADO={disopnivel_compra}")
