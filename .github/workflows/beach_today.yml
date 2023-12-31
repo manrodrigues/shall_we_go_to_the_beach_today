@@ -20,6 +20,8 @@ jobs:
           CREDENCIAL_ID: ${{ secrets.CREDENCIAL_ID }}
 
         run: |
+          echo pwd
+          echo la -la
           cd ./shall_we_go_to_the_beach_today/project_scripts
           python3 -m venv venv_praia
           source behave_orb/bin/activate
