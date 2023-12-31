@@ -1,3 +1,5 @@
+import os
+
 from configs import read_configs
 from utils import *
 
@@ -14,4 +16,7 @@ session, vagas_compra, disopnivel_compra = check_disponibilidade(temporadas, ses
 session, vagas_sorteio, disopnivel_venda = check_disponibilidade(temporadas, session, tipo="SORTEIO")
 
 with open("resultado_compra.env", "w") as f:
-    f.write(f"RESULTADO={disopnivel_compra}")
+    f.write(f"RESULTADO_COMPRA={disopnivel_compra}")
+
+print(f"Arquivo existe: {os.path.exists('resultado_compra.env')}")
+
