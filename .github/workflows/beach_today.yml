@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "Current working directory: $PWD"
           echo ls -la
-          cd ./shall_we_go_to_the_beach_today/project_scripts
+          cd ./project_scripts
           python3 -m venv venv_praia
           source behave_orb/bin/activate
           pip3 install -r requirements.txt
