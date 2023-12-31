@@ -1,7 +1,7 @@
-from configs import ProjectConfigs
+from configs import read_configs
 from utils import *
 
-configs = ProjectConfigs.configs()
+configs = read_configs()
 
 session, auth = get_auth(configs['credencial_id'], configs['nome'], configs['email'], configs['numero_matricula'])
 
