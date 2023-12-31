@@ -33,5 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: verify
     steps:
-      - name: Outra ação
-        run: echo "${{ needs.verify.outputs.resultado_compra }}"
+      - name: Carregar variáveis de ambiente
+        run: |
+          echo "RESULTADO_COMPRA=$(cat $GITHUB_WORKSPACE/resultado_compra.env)" >> $GITHUB_ENV
+
+      - name: Mostrar resultado
+        run: echo "O resultado é ${{ env.RESULTADO_COMPRA }}"

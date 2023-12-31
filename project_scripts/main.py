@@ -15,4 +15,4 @@ session, vagas_sorteio, disopnivel_venda = check_disponibilidade(temporadas, ses
 
 print(disopnivel_compra, disopnivel_venda)
 
-print(f"::set-output name=resultado_compra::{disopnivel_compra}")
+print(f"RESULTADO_COMPRA={disopnivel_compra}")
