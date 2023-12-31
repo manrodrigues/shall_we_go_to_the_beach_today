@@ -36,7 +36,8 @@ jobs:
       - name: Carregar variáveis de ambiente
         run: |
           echo "Current working directory: $PWD"
-          ls -la $PWD
+          cd ./project_scripts
+          echo "Current working directory: $PWD"
           echo "RESULTADO_COMPRA=$(cat $GITHUB_WORKSPACE/resultado_compra.env)" >> $GITHUB_ENV
 
       - name: Mostrar resultado
