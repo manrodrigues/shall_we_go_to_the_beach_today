@@ -23,6 +23,6 @@ jobs:
           echo "Current working directory: $PWD"
           cd ./project_scripts
           python3 -m venv venv_praia
-          source behave_orb/bin/activate
+          source venv_praia/bin/activate
           pip3 install -r requirements.txt
           python main.py
